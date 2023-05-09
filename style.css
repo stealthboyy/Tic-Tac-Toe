@@ -1,0 +1,238 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #56baed;
+}
+
+.start-game, .game-play, .result {
+    transition: all 0.3s ease;
+}
+
+.start-game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px 25px 25px;
+    max-width: 330px;
+    width: 100%;
+    border-radius: 5px;
+    /* display: none; */
+}
+
+.start-game.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+    
+
+}
+
+.start-game header {
+    font-size: 23px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.start-game .side {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.start-game .options {
+    display: flex;
+    width: 100%;
+}
+
+
+
+.options button {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 0;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    background-color: #56baed;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.options button.playerX {
+    margin-right: 5px;
+}
+
+
+.options button.playerO {
+    margin-left: 5px;
+}
+
+.options button:hover {
+    transform: scale(0.96);
+}
+
+/* -------------- */
+
+.game-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.game-play.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+.game-play .play-area {
+    margin-top: 20px;
+}
+.game-play .details{
+    background-color: #fff;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.game-play section {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.game-play section span {
+    background-color: #fff;
+    display: block;
+    height: 80px;
+    width: 80px;
+    margin: 2px;
+    border-radius: 5px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 65px;
+    color: #56baed;
+}
+
+.game-play .details .players {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-between ;
+}
+
+.game-play .details span {
+    
+    width: 100%;
+    border-radius: 5px;
+    padding: 7px 0;
+    font-size: 20px;
+    font-weight: 650;
+    cursor: default;
+    text-align: center;
+    z-index: 5;
+    position: relative;
+    color: #56baed;
+    transition: all 0.3s ease;
+}
+
+.details span:first-child {
+    color: #fff;
+}
+
+
+.players.active span:first-child {
+    color: #56baed;
+}
+.players.active span:nth-child(2) {
+    color: #fff;
+}
+.players.active .slider {
+    left: 50%;
+    
+}
+
+.details .slider {
+   position: absolute; 
+   top: 0;
+   left: 0;
+   background-color: #56baed;
+   height: 100%;
+   width: 50%;
+   border-radius: 5px;
+   z-index: 2;
+   transition: all 0.3s ease;
+}
+
+
+.result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 350px;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+
+.result.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.result .winner {
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+.result .winner p{
+    color: #56baed;
+    font-weight: 600;
+    margin: 0 4px;
+}
+
+.result .btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.result .btn button {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    background-color: #56baed;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.result .btn button:hover {
+    transform: scale(0.96);
+}

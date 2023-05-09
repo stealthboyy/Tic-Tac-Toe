@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- START GAME PAGE -->
+    <div class="start-game">
+        <header> Tic Tac Toe</header>
+        <div class="content">
+            <div class="side">Select which you want to be?</div>
+            <div class="options">
+                <button class="playerX">Player (X)</button>
+                <button class="playerO">Player (O)</button>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- GAMEPLAY PAGE -->
+    <div class="game-play">  <!--game-board-->
+        <div class="details">
+            <div class="players">
+                <span class="x-turn">X's Turn</span>
+                <span class="o-turn">O's Turn</span>
+                <div class="slider"></div>
+                
+            </div>
+        </div>
+    
+        <div class="play-area">
+            <section>
+                <span class="box1"></span>
+                <span class="box2"></span>
+                <span class="box3"></span>
+            </section>
+            
+            <section>
+                <span class="box4"></span>
+                <span class="box5"></span>
+                <span class="box6"></span>
+            </section>
+            
+            <section>
+                <span class="box7"></span>
+                <span class="box8"></span>
+                <span class="box9"></span>
+            </section>
+        </div>
+    </div>
+
+
+    <!-- RESULT BOX -->
+    <div class="result"> <!--result-box-->
+        <div class="winner">Player <p>X</p> wins the game!</div>
+        <div class="btn"><button>Replay</button></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
